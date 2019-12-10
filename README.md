@@ -28,10 +28,10 @@ $ crontab -e
 
 To check for the VPN connection only
 ```
-* * * * * [path_to_script]/vpn_checker.sh
+* * * * * [path_to_script]vpn-connection-checker/vpn_checker.sh > /dev/null 2>&1
 ```
 
 To check for the VPN connection and switch of WiFi if VPN is off
 ```
-* * * * * [path_to_script]/vpn_checker.sh wifi_off
+* * * * * [path_to_script]vpn-connection-checker/vpn_checker.sh wifi_off > /dev/null 2>&1
 ```
