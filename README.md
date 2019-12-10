@@ -15,7 +15,7 @@ git clone https://github.com/vedamak/vpn-connection-checker
 
 Make the file executable
 ```
-$ chmod u+x vpn-connection-checker
+$ chmod u+x vpn-connection-checker/vpn_checker.sh
 ```
 
 ### Adding script to crontab
