@@ -4,6 +4,7 @@ wifioff=$1
 scriptpath="$( cd "$(dirname "$0")" ; pwd -P )"
 status=$(/sbin/ifconfig tun0 2>&1 | grep -q 'flags' && echo $?)
 
+
 echo "Status: $status"
 echo "Checking tunnel tun0 status"
 
