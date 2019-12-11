@@ -26,12 +26,17 @@ Setup a cron job to run the script every minute
 $ crontab -e
 ```
 
+In Unbuntu 18+ you'll need do add the following so that cron knows which desktop session to send notifications to. This may be different for other types of desktop sessions.
+```
+XDG_RUNTIME_DIR=/run/user/$(id -u)
+```
+
 To check for the VPN connection only
 ```
-* * * * * [path_to_script]/vpn_checker.sh
+* * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) [path_to_script]/vpn_checker.sh
 ```
 
 To check for the VPN connection and switch of WiFi if VPN is off
 ```
-* * * * * [path_to_script]/vpn_checker.sh wifi_off
+* * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) [path_to_script]/vpn_checker.sh wifi_off
 ```
